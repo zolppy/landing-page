@@ -29,6 +29,7 @@ body {
   place-items: center;
   background-image: url("img/bg.jpg");
   background-size: cover;
+  min-height: 100dvh;
   background-repeat: no-repeat;
 }
 
@@ -45,6 +46,7 @@ body {
 
 .home__wrapper p {
   max-width: 50ch;
+  text-align: center;
 }
 
 .home__wrapper button {
@@ -79,6 +81,7 @@ body {
 
 .all-you-need h2 {
   font-size: 1.7rem;
+  text-align: center;
 }
 
 /* Devices */
@@ -101,6 +104,7 @@ body {
   flex-direction: column;
   align-items: center;
   row-gap: 2em;
+  text-align: center;
   height: 620px;
   border-radius: 0.5em;
 }
@@ -137,6 +141,11 @@ body {
 
 .our-difference__wrapper h2 {
   font-size: 1.7rem;
+  text-align: center;
+}
+
+.our-difference__wrapper p {
+  text-align: center;
 }
 
 /* Contact us */
@@ -187,14 +196,4 @@ footer {
 
 footer span {
   color: cyan;
-}
-
-/* Utils */
-
-.min-h-dvh {
-  min-height: 100dvh;
-}
-
-.text-center {
-  text-align: center;
 }
