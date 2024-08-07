@@ -204,6 +204,8 @@ footer span {
   display: none;
   min-height: 100dvh;
   place-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 .block p {
