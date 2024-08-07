@@ -5,15 +5,24 @@ const getScreenWidth = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const body = document.querySelector("body");
   const screenWidth = getScreenWidth();
 
   if (screenWidth < 900) {
-    body.textContent = "";
-    body.innerHTML =
-      "<main><section><h1>Disponível para desktop</h1></section></main>";
-    body.style.display = "grid";
-    body.style.minHeight = "100dvh";
-    body.style.placeItems = "center";
+    const body = document.querySelector("body");
+    const main = document.createElement("main");
+    const section = document.createElement("section");
+    const p = document.createElement("p");
+
+    p.innerHTML = "Disponível <br /> para <br /> desktop";
+    p.style.fontSize = "24px";
+    p.style.fontWeight = "bold";
+    p.style.textAlign = "center";
+    section.appendChild(p);
+    section.style.display = "grid";
+    section.style.minHeight = "100dvh";
+    section.style.placeItems = "center";
+    main.appendChild(section);
+    body.innerHTML = "";
+    body.appendChild(main);
   }
 });
