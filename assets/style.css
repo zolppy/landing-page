@@ -1,4 +1,8 @@
 /* Reset de alguns estilos padrão, que variam entre navegadores */
+/* Também há definições básicas para tags */
+/* Esta seção funciona como um arquivo base.css da metodologia SMACSS */
+
+@charset "UTF-8";
 
 * {
   box-sizing: border-box;
@@ -22,15 +26,28 @@ body {
   line-height: 1.25;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
 /* Home */
 
 .home {
-  display: grid;
-  place-items: center;
   background-image: url("img/bg.jpg");
-  background-size: cover;
-  min-height: 100dvh;
   background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
 }
 
 .home__wrapper {
@@ -40,48 +57,39 @@ body {
   row-gap: 2em;
 }
 
-.home__wrapper h1 {
-  font-size: 2.5rem;
-}
-
 .home__wrapper p {
   max-width: 50ch;
   text-align: center;
 }
 
 .home__wrapper button {
-  padding: 1em 1.5em;
   background-color: transparent;
   border: 1px solid black;
-  color: black;
   border-radius: 0.5em;
+  color: black;
+  padding: 1em 1.5em;
   transition: all 0.3s ease-out;
 }
 
 .home__wrapper button:hover {
-  cursor: pointer;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 /* "All you need" */
 
 .all-you-need {
-  padding: 2em;
   display: flex;
   flex-direction: column;
+  padding: 2em;
   row-gap: 2em;
 }
 
 .all-you-need__wrapper {
+  columns: 2;
   margin-inline: auto;
   width: clamp(500px, 70%, 900px);
-  columns: 2;
-}
-
-.all-you-need h2 {
-  font-size: 1.7rem;
-  text-align: center;
 }
 
 /* Devices */
@@ -92,37 +100,33 @@ body {
 }
 
 .devices__wrapper {
+  column-gap: 1em;
   display: flex;
   margin-inline: auto;
-  column-gap: 1em;
   width: clamp(500px, 70%, 900px);
 }
 
 .devices__container {
-  display: flex;
-  background-color: white;
-  flex-direction: column;
   align-items: center;
+  background-color: white;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  height: 620px;
   row-gap: 2em;
   text-align: center;
-  height: 620px;
-  border-radius: 0.5em;
 }
 
 .devices__container img {
-  width: 100%;
-  height: 50%;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
-}
-
-.devices__container h3 {
-  font-size: 1.2rem;
+  height: 50%;
+  width: 100%;
 }
 
 .devices__container p {
+  margin-inline: auto;
   width: 90%;
-  margin-inline: center;
 }
 
 /* Our difference */
@@ -134,14 +138,9 @@ body {
 .our-difference__wrapper {
   flex-direction: column;
   display: flex;
-  row-gap: 2em;
   margin-inline: auto;
+  row-gap: 2em;
   width: clamp(500px, 70%, 900px);
-}
-
-.our-difference__wrapper h2 {
-  font-size: 1.7rem;
-  text-align: center;
 }
 
 .our-difference__wrapper p {
@@ -151,47 +150,47 @@ body {
 /* Contact us */
 
 .contact-us {
-  padding: 2em;
   background-color: #444;
+  padding: 2em;
 }
 
 .contact-us__wrapper {
   color: white;
-  width: clamp(500px, 70%, 900px);
-  margin-inline: auto;
   display: flex;
+  margin-inline: auto;
+  width: clamp(500px, 70%, 900px);
 }
 
 .contact-us__contact {
   background-color: rgb(62, 62, 224);
-  padding: 2em;
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
   display: flex;
   flex-direction: column;
+  padding: 2em;
   row-gap: 2em;
   text-align: center;
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
 }
 
 .contact-us__about {
   background-color: black;
-  padding: 2em;
+  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
   display: flex;
   flex-direction: column;
+  padding: 2em;
   row-gap: 2em;
   text-align: center;
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
 }
 
 /* Footer */
 
 footer {
+  background-color: black;
+  color: white;
   display: flex;
   justify-content: space-around;
   padding-block: 2em;
-  background-color: black;
-  color: white;
 }
 
 footer span {
