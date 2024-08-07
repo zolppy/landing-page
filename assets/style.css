@@ -196,3 +196,18 @@ footer {
 footer span {
   color: cyan;
 }
+
+/* Block */
+.block {
+  background-color: white;
+  color: black;
+  display: none;
+  min-height: 100dvh;
+  place-items: center;
+}
+
+.block p {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
